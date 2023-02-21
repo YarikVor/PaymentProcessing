@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentProcessing", "PaymentProcessing\PaymentProcessing.csproj", "{87E46A6F-418C-4A73-AC21-6E62F2718649}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentProcessing.Json", "PaymentProcessiong.Json\PaymentProcessing.Json.csproj", "{155CD97B-A1EB-4D68-9DA1-8AA0CC7CF0FF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentProcessing.Entities", "PaymentProcessing.Entities\PaymentProcessing.Entities.csproj", "{8E0B7E02-CBC9-43D9-B789-9474CE8BF2C5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigJson", "IniManager\ConfigJson.csproj", "{F9A884E2-6334-40AD-8242-4EAC2654E147}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B8A57F73-24CE-4AF0-B12A-EDCB8AEB725C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentProcessing.Json.UTests", "PaymentProcessing.Json.UTests\PaymentProcessing.Json.UTests.csproj", "{525989BF-C2D8-404B-950B-36FDDFCB2266}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentProcessing.Entities.UTests", "PaymentProcessing.Entities.UTests\PaymentProcessing.Entities.UTests.csproj", "{EAECC04B-FA83-483B-9626-8D072F2EC97E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87E46A6F-418C-4A73-AC21-6E62F2718649}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87E46A6F-418C-4A73-AC21-6E62F2718649}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87E46A6F-418C-4A73-AC21-6E62F2718649}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87E46A6F-418C-4A73-AC21-6E62F2718649}.Release|Any CPU.Build.0 = Release|Any CPU
+		{155CD97B-A1EB-4D68-9DA1-8AA0CC7CF0FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{155CD97B-A1EB-4D68-9DA1-8AA0CC7CF0FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{155CD97B-A1EB-4D68-9DA1-8AA0CC7CF0FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{155CD97B-A1EB-4D68-9DA1-8AA0CC7CF0FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E0B7E02-CBC9-43D9-B789-9474CE8BF2C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E0B7E02-CBC9-43D9-B789-9474CE8BF2C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E0B7E02-CBC9-43D9-B789-9474CE8BF2C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E0B7E02-CBC9-43D9-B789-9474CE8BF2C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9A884E2-6334-40AD-8242-4EAC2654E147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9A884E2-6334-40AD-8242-4EAC2654E147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9A884E2-6334-40AD-8242-4EAC2654E147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9A884E2-6334-40AD-8242-4EAC2654E147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{525989BF-C2D8-404B-950B-36FDDFCB2266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{525989BF-C2D8-404B-950B-36FDDFCB2266}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{525989BF-C2D8-404B-950B-36FDDFCB2266}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{525989BF-C2D8-404B-950B-36FDDFCB2266}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAECC04B-FA83-483B-9626-8D072F2EC97E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAECC04B-FA83-483B-9626-8D072F2EC97E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAECC04B-FA83-483B-9626-8D072F2EC97E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAECC04B-FA83-483B-9626-8D072F2EC97E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{525989BF-C2D8-404B-950B-36FDDFCB2266} = {B8A57F73-24CE-4AF0-B12A-EDCB8AEB725C}
+		{EAECC04B-FA83-483B-9626-8D072F2EC97E} = {B8A57F73-24CE-4AF0-B12A-EDCB8AEB725C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1F6CA21-6ED1-4BAE-BFD4-C30E6355261A}
+	EndGlobalSection
+EndGlobal
