@@ -1,11 +1,10 @@
-﻿namespace PaymentProcessing
-{
-  public class ResetCommand : CommandInfo
-  {
-    public ResetCommand() : base("reset", "reset work")
-    {
-    }
+﻿namespace PaymentProcessing;
 
-    public override void Execute() => Commands.Start();
+public class ResetCommand : CommandInfo
+{
+  public ResetCommand() : base("reset", "reset work")
+  {
   }
+
+  public override void Execute() => Commands.Start();
 }
