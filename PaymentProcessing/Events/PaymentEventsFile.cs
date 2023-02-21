@@ -1,39 +1,37 @@
-﻿namespace PaymentProcessing
+﻿namespace PaymentProcessing;
+
+public static class PaymentEventsFile
 {
-  public static class PaymentEventsFile
+  private static FileSystemWatcher fileSystemWatcher = new FileSystemWatcher();
+
+  public static event Action<FileSystemEventArgs> CreateFile;
+
+  public static readonly string[] filters = { "*.txt", "*.csv" };
+
+  static PaymentEventsFile()
   {
-    private static FileSystemWatcher fileSystemWatcher = new FileSystemWatcher();
+    Update();
+  }
 
-    public static event Action<FileSystemEventArgs> CreateFile;
+  private static void Update()
+  {
+    fileSystemWatcher.Path = Path.GetFullPath(StaticData.PathLoad);
 
-    public static readonly string[] filters = { "*.txt", "*.csv" };
-
-    static PaymentEventsFile()
+    foreach (var filter in filters)
     {
-      Update();
+      fileSystemWatcher.Filters.Add(filter);
     }
 
-    private static void Update()
+    fileSystemWatcher.Created += FileSystemWatcher_Created;
+
+    fileSystemWatcher.EnableRaisingEvents = true;
+  }
+
+  private static void FileSystemWatcher_Created(object sender, FileSystemEventArgs e)
+  {
+    if (StaticData.IsWorking)
     {
-      //fileSystemWatcher.NotifyFilter = NotifyFilters.CreationTime;
-      fileSystemWatcher.Path = Path.GetFullPath(StaticData.PathLoad);
-
-      foreach (var filter in filters)
-      {
-        fileSystemWatcher.Filters.Add(filter);
-      }
-
-      fileSystemWatcher.Created += FileSystemWatcher_Created;
-
-      fileSystemWatcher.EnableRaisingEvents = true;
-    }
-
-    private static void FileSystemWatcher_Created(object sender, FileSystemEventArgs e)
-    {
-      if (StaticData.IsWorking)
-      {
-        CreateFile?.Invoke(e);
-      }
+      CreateFile?.Invoke(e);
     }
   }
 }
