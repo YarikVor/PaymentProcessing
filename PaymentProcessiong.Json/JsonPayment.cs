@@ -2,10 +2,10 @@
 
 namespace PaymentProcessing.Json;
 
-public class JsonPayment
+public sealed class JsonPayment
 {
-  public string city;
-  public List<JsonService> services = new List<JsonService>();
+  public readonly string city;
+  public readonly List<JsonService> services = new List<JsonService>();
 
   internal JsonPayment(string city) => this.city = city;
 

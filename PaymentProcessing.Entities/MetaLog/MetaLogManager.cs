@@ -49,7 +49,7 @@ public static class MetaLogManager
     res.parsedFiles = int.Parse(dictionary[PROP_PARSED_FILES]);
     res.parsedLines = int.Parse(dictionary[PROP_PARSED_LINES]);
     res.foundErrors = int.Parse(dictionary[PROP_FOUND_ERRORS]);
-    res.invalidFiles = new List<string>(dictionary[PROP_INVALID_FILES].Split(',').Select(e => e.Trim(new char[] { ' ', '[', ']' })));
+    res.invalidFiles.AddRange(dictionary[PROP_INVALID_FILES].Split(',').Select(e => e.Trim(new char[] { ' ', '[', ']' })));
 
     return res;
   }

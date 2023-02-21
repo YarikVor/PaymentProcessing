@@ -5,7 +5,7 @@ namespace PaymentProcessing.Entities
 {
   public static class PaymentManager
   {
-    public const string pattern = @"(?<=^|,)\s*((?:"".*?"")|(?:[\s\w\-\.]+)|(?:))";
+    public const string PATTERN = @"(?<=^|,)\s*((?:"".*?"")|(?:[\s\w\-\.]+)|(?:))";
 
     private static readonly Action<Payment, string>[] actionForConvert = new Action<Payment, string>[] {
             (p, s) => p.firstName = s,
@@ -19,7 +19,7 @@ namespace PaymentProcessing.Entities
 
     public static Payment ConvertRowCsv(string csv)
     {
-      var match = Regex.Match(csv, pattern);
+      var match = Regex.Match(csv, PATTERN);
       if (!match.Success) throw new FormatException();
 
       var res = new Payment();

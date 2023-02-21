@@ -2,12 +2,12 @@
 
 namespace PaymentProcessing.Json;
 
-public class JsonPayer
+public sealed class JsonPayer
 {
-  public string name;
-  public decimal payment;
-  public DateOnly date;
-  public long account_number;
+  public readonly string name;
+  public readonly decimal payment;
+  public readonly DateOnly date;
+  public readonly long account_number;
 
   private JsonPayer(string name, decimal payment, DateOnly date, long account_number)
   {
